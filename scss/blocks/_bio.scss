@@ -1,0 +1,31 @@
+.bio {
+    margin-bottom: 90px;
+    padding-top: 134px;
+    &__inner {
+        display: flex;
+        column-gap: 140px;
+    }
+    &__img {
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    &__content {}
+    &__name {
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 71px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+    }
+    &__description {}
+    &__paragraph {
+        margin-bottom: 9px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.44px;
+        color: #FFFFFF;
+    }
+}

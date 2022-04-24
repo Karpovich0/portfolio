@@ -1,0 +1,85 @@
+html {
+    height: 100%;
+}
+
+.body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #232323; //171718
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.main {}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1195px;
+}
+
+.button {
+    padding: 16px 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.button--violet {
+    background: #5C62EC;
+    &:hover {
+        background: #494eec;
+    }
+}
+
+.button--transparent-bg {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    &:hover {
+        background: rgba($color: #FFFFFF, $alpha: 0.1);
+    }
+}
+
+.button--meme {
+    display: flex;
+    column-gap: 10px;
+    &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url(../../img/intro/face-laugh-beam-solid.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+}
+
+.button--view-more {
+    display: flex;
+    column-gap: 10px;
+    &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: url(../../img/about/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+}
+
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/about';
+@import 'blocks/projects';
+@import 'blocks/footer';
+@import 'blocks/bio';
+@import 'blocks/skills';
+@import 'blocks/modal';

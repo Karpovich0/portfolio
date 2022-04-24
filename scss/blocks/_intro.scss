@@ -1,0 +1,43 @@
+.intro {
+    padding: 70px 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        width: 100%;
+        max-width: 695px;
+    }
+    &__title {
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.15px;
+        color: #a0a0a0;
+        order: 2;
+    }
+    &__text {
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__greeting {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 71px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        color: #FAFAFA;
+    }
+    &__name {
+        color: #5C62EC;
+    }
+    &__buttons-row {
+        display: flex;
+        justify-content: center;
+        column-gap: 24px;
+    }
+}

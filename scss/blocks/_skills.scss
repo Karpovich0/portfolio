@@ -1,0 +1,52 @@
+.skills {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #26292D;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 44px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.25px;
+        color: #FFFFFF;
+    }
+    &__content {}
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        background-color: #1C1E22;
+        border-radius: 8px;
+    }
+    &__name-of-skill {
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.25px;
+        color: #FFFFFF;
+    }
+    &__img-wrapper {
+        order: -2;
+        margin-bottom: 10px;
+    }
+    &__img {}
+    &__desription {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.44px;
+        color: #FFFFFF;
+    }
+}
