@@ -1,3 +1,8 @@
+$width-tablet-end: 1200px;
+$width-tablet-middle: 992px;
+$width-tablet-start: 768px;
+$width-mobile-middle: 630px;
+$width-mobile-start: 475px;
 html {
     height: 100%;
 }
@@ -11,18 +16,21 @@ html {
     color: #FFFFFF;
     display: grid;
     grid-template-rows: 1fr auto;
+    &--lock{
+        overflow: hidden;         
+    }
 }
 
 .main {}
 
 .container {
-    padding: 0 20px;
+    padding: 0 30px;
     margin: 0 auto;
     width: 100%;
-    max-width: 1195px;
+    max-width: 1215px;
 }
 
-.button {
+.button {    
     padding: 16px 32px;
     font-weight: 500;
     font-size: 16px;
@@ -41,7 +49,7 @@ html {
     }
 }
 
-.button--transparent-bg {
+.button--transparent-bg {   
     background: transparent;
     border: 1px solid #FFFFFF;
     &:hover {
@@ -63,7 +71,7 @@ html {
 }
 
 .button--view-more {
-    display: flex;
+    display: inline-block;
     column-gap: 10px;
     &::after {
         content: "";
@@ -73,6 +81,13 @@ html {
         background-repeat: no-repeat;
         background-position: 0 0;
     }
+}
+
+.button--about{
+    
+}
+.header-logo{
+    display: none;
 }
 
 @import 'blocks/header';

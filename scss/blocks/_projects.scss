@@ -1,6 +1,6 @@
 .projects {
     .container {
-        border-bottom: 1px solid #26292D;
+       
     }
     &__inner {}
     &__title {
@@ -10,32 +10,56 @@
         line-height: 40px;
         letter-spacing: 0.25px;
         color: #FFFFFF;
+        @media(max-width:$width-tablet-start){           
+            margin-bottom: 24px;
+        }
     }
     &__content {
         margin-bottom: 40px;
+        @media(max-width:$width-tablet-start){           
+            margin-bottom: 30px;
+        }
+        @media(max-width:$width-mobile-start){           
+           margin-right: -30px;
+           margin-left: -30px;
+        }
     }
     &__list {
         position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
+        @media(max-width:$width-tablet-middle){           
+            grid-template-columns: 1fr;
+        }
+        @media(max-width:$width-tablet-start){           
+            gap: 17px;
+        }
     }
     &__item {
         background-color: #1C1E22;
         border-radius: 8px;
+        @media(max-width:$width-mobile-start){           
+            border-radius: 0;
+        }
     }
     &__link-wrapeper {
         position: relative;
         border-radius: 8px;
-        transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+        transition: scale 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
         &:hover {
-            transform: translate(20px, -20px);
-            // box-shadow: 4px 8px 25px 0px rgba(235, 239, 242, 0.39);
+            scale: 1.05;           
             z-index: 20;
+        }
+        @media(max-width:$width-mobile-start){           
+            border-radius: 0;
         }
     }
     &__link-wrapeper:hover &__name {
         z-index: 40;
+    }
+    &__blurer{
+        transition: background-color 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
     &__link-wrapeper:hover &__blurer {
         z-index: 25;
@@ -46,7 +70,18 @@
     &__img {
         border-radius: 8px;
         object-fit: cover;
+        width: 100%;
+        max-width: 565px;
+        height: 100%;
+        max-height: 267px;
         transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+        @media(max-width:$width-tablet-middle){           
+            max-width: 100%;
+            max-height: 300px;
+        }
+        @media(max-width:$width-mobile-start){           
+            border-radius: 0;
+        }        
     }
     &__name {
         color: #FFFFFF;
@@ -60,6 +95,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: z-index 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
     &__blurer {
         position: absolute;
@@ -74,5 +110,11 @@
         margin-bottom: 80px;
         display: flex;
         justify-content: center;
+        @media(max-width:$width-tablet-end){           
+            margin-bottom: 50px;
+        }
+        @media(max-width:$width-tablet-start){           
+            margin-bottom: 30px;
+        }
     }
 }

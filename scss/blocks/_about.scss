@@ -2,6 +2,15 @@
     display: flex;
     justify-content: center;
     padding-bottom: 90px;
+    @media(max-width:$width-tablet-end){           
+        padding-bottom: 60px;
+    }
+    @media(max-width:$width-tablet-middle){           
+        padding-bottom: 50px;
+    }
+    @media(max-width:$width-tablet-start){           
+        padding-bottom: 30px;
+    }
     &__inner {
         display: flex;
         column-gap: 32px;
@@ -11,18 +20,54 @@
         background-color: #1C1E22;
         border-radius: 8px;
         border: 1px solid #26292D;
+        @media(max-width:$width-tablet-start){                      
+            flex-direction: column;
+            row-gap: 20px;
+            border-radius: 0;
+        }
+        @media(max-width:$width-mobile-start){
+            padding: 0 0 20px;
+            row-gap: 15px;
+            margin-bottom: 0;
+        }        
     }
     &__my-picture {
         object-fit: cover;
         border-radius: 8px;
+        @media(max-width:$width-tablet-start){           
+            align-self: center;
+        }
+        @media(max-width:$width-mobile-start){      
+            border-radius: 0;
+            width: 100%;
+            // margin-left: -24px;           
+            // margin-right: -24px;
+        }
     }
-    &__content {}
+    &__content {
+        @media(max-width:$width-tablet-start){           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     &__title {
         margin-bottom: 32px;
         font-weight: 500;
         font-size: 48px;
         line-height: 57px;
         color: #FFFFFF;
+        @media(max-width:$width-tablet-middle){   
+           margin-bottom: 15px;
+           font-size: 42px;
+         }
+        @media(max-width:$width-tablet-start){    
+            margin-bottom: 10px;       
+            text-align: center;
+        }
+        @media(max-width:$width-mobile-middle){
+            margin-bottom: 5px;
+        } 
     }
     &__text {
         margin-bottom: 35px;
@@ -31,8 +76,23 @@
         line-height: 28px;
         letter-spacing: 0.44px;
         color: #FFFFFF;
+        @media(max-width:$width-tablet-start){
+          margin-bottom: 20px;
+          font-style: 14px;
+          line-height: 24px;
+        } 
     }
     &__paragraph {
         margin-bottom: 9px;
+        @media(max-width:$width-tablet-start){   
+           padding: 0 30px;        
+           text-align: center;
+        }
+        @media(max-width:$width-mobile-middle){   
+            padding: 0;
+        }
+        @media(max-width:$width-mobile-start){
+            padding: 0 20px;
+        } 
     }
 }

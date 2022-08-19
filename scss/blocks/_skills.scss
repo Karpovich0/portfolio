@@ -1,25 +1,45 @@
 .skills {
+    .container{
+        @media(max-width:$width-mobile-middle){         
+           padding: 0;
+        }
+    }
     &__inner {
         display: flex;
         flex-direction: column;
         padding-bottom: 80px;
         border-bottom: 1px solid #26292D;
+        @media(max-width:$width-tablet-start){         
+            padding-bottom: 50px;
+        }
     }
     &__title {
         text-align: center;
         margin-bottom: 44px;
         font-style: normal;
         font-weight: 500;
-        font-size: 34px;
+        font-size: 44px;
         line-height: 40px;
         letter-spacing: 0.25px;
         color: #FFFFFF;
+        @media(max-width:$width-tablet-start){         
+            margin-bottom: 32px;
+            font-size: 40px;
+            line-height: 1;
+        }
     }
     &__content {}
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+        @media(max-width:$width-tablet-end){         
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(max-width:$width-tablet-start){         
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
     }
     &__item {
         display: flex;
@@ -27,15 +47,21 @@
         padding: 24px;
         background-color: #1C1E22;
         border-radius: 8px;
+        @media(max-width:$width-mobile-middle){         
+            border-radius: 0;
+        }
     }
     &__name-of-skill {
         margin-bottom: 10px;
         font-style: normal;
         font-weight: 500;
         font-size: 34px;
-        line-height: 40px;
+        line-height: 1.2;
         letter-spacing: 0.25px;
         color: #FFFFFF;
+        @media(max-width:$width-tablet-start){         
+           font-size: 30px;
+         }
     }
     &__img-wrapper {
         order: -2;
@@ -45,8 +71,11 @@
     &__desription {
         font-weight: 400;
         font-size: 16px;
-        line-height: 28px;
+        line-height: 1.75;
         letter-spacing: 0.44px;
         color: #FFFFFF;
+        @media(max-width:$width-tablet-start){         
+           font-size: 15px;
+        }
     }
 }
